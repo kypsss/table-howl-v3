@@ -1,0 +1,73 @@
+script_key="YRKEY";
+getgenv().Howl = {
+    ["Options"] = {
+        Type = "Target",
+        UpdateNotification = true,
+        ["Keybind"] = {
+            Aimbot = "E",
+            Resolver = "C",
+            Macro = "X",
+        },
+    },
+    ["Combat"] = {
+        ["Aimbot"] = {
+            Prediction = 0.35,
+            Smoothness = 0.045,
+            Part = "Head",
+            PredictionAdjuster = true,
+            ["MultipleParts"] = {
+                Enabled = false,
+                Parts = { "Head", "UpperTorso", "HumanoidRootPart", "LowerTorso" },
+            },
+            ["Shake"] = {
+                Enabled = false,
+                Amount = 5,
+            },
+            ["MouseTp"] = {
+                Enabled = true,
+                Smoothness = 0.0300,
+                Prediction = 0.134151,
+                Part = "HumanoidRootPart",
+            },
+        },
+        ["Silent"] = {
+            Prediction = 0.143,
+            Part = "HumanoidRootPart",
+            PredictionAdjuster = false,
+            ["MultipleParts"] = {
+                Enabled = false,
+                Parts = { "Head", "UpperTorso", "HumanoidRootPart", "LowerTorso" },
+            },
+            ["Offsets"] = {
+                Jump = { Amount = 0 },
+                Fall = { Amount = 0 },
+            },
+        },
+    },
+    ["AntiAim"] = {
+        ["Enabled"] = true,
+        ["Keybind"] = "V",
+        ["Velocity"] = -5,
+    },
+    ["PredictionAdjuster"] = {
+        VelocityThreshold = 250,
+    },
+    ["Misc"] = {
+        ["Checks"] = {
+            KnockedChecks = false,
+            TargetDeath = false,
+            PlayerDeath = true,
+            WallCheck = false,
+            ["Resolver"] = {
+                Enabled = false,
+                Notification = true,
+            },
+        },
+        ["Macro"] = {
+            Enabled = true,
+            Speed = 0.065,
+            Type = "Electron", -- "First", "Third", "Electron" (Doesn't use "Speed")
+        },
+    },
+}
+
