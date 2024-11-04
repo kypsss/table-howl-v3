@@ -1,74 +1,80 @@
-script_key="YRKEY";
+script_key="kypsboss";
+
 getgenv().Howl = {
-    ["Options"] = {
-        Type = "Target",
+    Options = {
+        Type = "Target", -- TargetOnly
         UpdateNotification = true,
-        ["Keybind"] = {
+        Keybind = {
             Aimbot = "E",
             Resolver = "C",
             Macro = "X",
         },
     },
-    ["Combat"] = {
-        ["Aimbot"] = {
+    Combat = {
+        Aimbot = {
             Prediction = 0.35,
             Smoothness = 0.045,
             Part = "Head",
             PredictionAdjuster = true,
-            ["MultipleParts"] = {
+            MultipleParts = {
                 Enabled = false,
                 Parts = { "Head", "UpperTorso", "HumanoidRootPart", "LowerTorso" },
             },
-            ["Shake"] = {
+            Shake = {
                 Enabled = false,
                 Amount = 5,
             },
-            ["MouseTp"] = {
-                Enabled = true,
+            MouseTp = {
+                Enabled = false,
                 Smoothness = 0.0300,
                 Prediction = 0.134151,
-                Part = "HumanoidRootPart",
+                Part = "Torso",
             },
         },
-        ["Silent"] = {
-            Prediction = 0.143,
+        Silent = {
+            Prediction = 0.155,
             Part = "HumanoidRootPart",
             PredictionAdjuster = false,
-            ["MultipleParts"] = {
+            MultipleParts = {
                 Enabled = false,
                 Parts = { "Head", "UpperTorso", "HumanoidRootPart", "LowerTorso" },
             },
-            ["Offsets"] = {
-                Jump = { Amount = 0 },
+            Offsets = {
+                Jump = { Amount = -2.50 },
                 Fall = { Amount = 0 },
             },
         },
     },
-    ["AntiAim"] = {
-        ["Enabled"] = true,
-        ["Keybind"] = "V",
-        ["Velocity"] = -5,
+    AntiAim = {
+        Enabled = true,
+        Keybind = "Z",
+        Velocity = -35,
     },
-    ["PredictionAdjuster"] = {
+    PredictionAdjuster = {
         VelocityThreshold = 250,
     },
-    ["Misc"] = {
-        ["Checks"] = {
-            KnockedChecks = false,
-            TargetDeath = false,
+    Misc = {
+        Checks = {
+            KnockedChecks = true,
+            TargetDeath = true,
             PlayerDeath = true,
             WallCheck = false,
-            ["Resolver"] = {
+            Resolver = {
                 Enabled = false,
                 Notification = true,
             },
         },
-        ["Macro"] = {
+        Macro = {
             Enabled = true,
             Speed = 0.065,
             Type = "Electron", -- "First", "Third", "Electron" (Doesn't use "Speed")
         },
     },
+    ESP = {
+        Enabled = true,
+        Color = Color3.new(0.117647, 0.772549, 0.411765),
+        Transparency = 1,
+        Distance = 30000,
+        DisplayName = true,
+    }
 }
-
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/1d3a8a843aa5ce6d1ce7fed41e62a5d3.lua"))()
