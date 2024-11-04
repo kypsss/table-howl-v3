@@ -1,4 +1,4 @@
-script_key="kypsboss";
+script_key="asdwasdwas";
 
 getgenv().Howl = {
     Options = {
@@ -8,13 +8,14 @@ getgenv().Howl = {
             Aimbot = "E",
             Resolver = "C",
             Macro = "X",
+            TriggerBot = "H",
         },
     },
     Combat = {
         Aimbot = {
             Prediction = 0.35,
-            Smoothness = 0.045,
-            Part = "Head",
+            Smoothness = 0.054,
+            Part = "HumanoidRootPart",
             PredictionAdjuster = true,
             MultipleParts = {
                 Enabled = false,
@@ -26,14 +27,14 @@ getgenv().Howl = {
             },
             MouseTp = {
                 Enabled = false,
-                Smoothness = 0.0300,
-                Prediction = 0.134151,
-                Part = "Torso",
+                Smoothness = 0,
+                Prediction = 0,
+                Part = "UpperTorso",
             },
         },
         Silent = {
-            Prediction = 0.155,
-            Part = "HumanoidRootPart",
+            Prediction = 0.165,
+            Part = "UpperTorso",
             PredictionAdjuster = false,
             MultipleParts = {
                 Enabled = false,
@@ -44,11 +45,21 @@ getgenv().Howl = {
                 Fall = { Amount = 0 },
             },
         },
+        TriggerBot = {
+            Enabled = false,
+            Delay = 0.1,
+            CheckInterval = 0.05, -- Check interval to reduce FPS drop
+            Whitelist = {
+                "kypsboss",
+                "@databasedump",
+                "users that you dont want the trigger bot 2 work on",
+            },
+        },
     },
     AntiAim = {
         Enabled = true,
         Keybind = "Z",
-        Velocity = -35,
+        Velocity = -5,
     },
     PredictionAdjuster = {
         VelocityThreshold = 250,
@@ -72,8 +83,8 @@ getgenv().Howl = {
     },
     ESP = {
         Enabled = true,
-        Color = Color3.new(0.117647, 0.772549, 0.411765),
-        Transparency = 1,
+        Color = Color3.new(0.309804, 1.000000, 0.619608),
+        Transparency = 4,
         Distance = 30000,
         DisplayName = true,
     }
