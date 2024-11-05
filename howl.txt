@@ -1,3 +1,4 @@
+script_key="@databasedump";
 getgenv().Howl = {
     Options = {
         Type = "Target", -- TargetOnly
@@ -71,12 +72,17 @@ getgenv().Howl = {
             Speed = 0.065,
             Type = "Electron", -- "First", "Third", "Electron" (Doesn't use "Speed")
         },
+        Watermark = {
+            Enabled = true,
+        },
     },
     ESP = {
         Enabled = true,
-        Color = Color3.new(0.211765, 0.070588, 0.294118),
+        Color = Color3.new(0.788235, 0.450980, 0.070588),
         Transparency = 4,
         Distance = 30000,
         DisplayName = true,
     },
 }
+
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/1d3a8a843aa5ce6d1ce7fed41e62a5d3.lua"))()
