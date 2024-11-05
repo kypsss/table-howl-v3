@@ -1,23 +1,21 @@
 script_key="@databasedump";
 getgenv().Howl = {
     Options = {
-        Type = "Target", -- TargetOnly
+        Type = "Target",
         UpdateNotification = true,
         Keybind = {
             Aimbot = "E",
             Resolver = "C",
+            AutoBuyKeyBind = "Z",
+            AntiAimKeybind = "P",
             Macro = "X",
         },
     },
-    Autobuy = {
-        Keybind = "H",
-        ProximityDistance = 10,
-    },
     Combat = {
         Aimbot = {
-            Prediction = 0.35,
-            Smoothness = 0.054,
-            Part = "UpperTorso",
+            Prediction = 0.132,
+            Smoothness = 0.060,
+            Part = "Head",
             PredictionAdjuster = true,
             MultipleParts = {
                 Enabled = false,
@@ -29,28 +27,27 @@ getgenv().Howl = {
             },
             MouseTp = {
                 Enabled = false,
-                Smoothness = 0,
-                Prediction = 0,
-                Part = "UpperTorso",
+                Smoothness = 0.0300,
+                Prediction = 0.134151,
+                Part = "HumanoidRootPart",
             },
         },
         Silent = {
-            Prediction = 0.165,
-            Part = "UpperTorso",
+            Prediction = 0.1452,
+            Part = "HumanoidRootPart",
             PredictionAdjuster = false,
             MultipleParts = {
                 Enabled = false,
                 Parts = { "Head", "UpperTorso", "HumanoidRootPart", "LowerTorso" },
             },
             Offsets = {
-                Jump = { Amount = 0.50 },
+                Jump = { Amount = -1.50 },
                 Fall = { Amount = 0 },
             },
         },
     },
     AntiAim = {
         Enabled = true,
-        Keybind = "Z",
         Velocity = -5,
     },
     PredictionAdjuster = {
@@ -59,7 +56,7 @@ getgenv().Howl = {
     Misc = {
         Checks = {
             KnockedChecks = true,
-            TargetDeath = true,
+            TargetDeath = false,
             PlayerDeath = true,
             WallCheck = false,
             Resolver = {
@@ -70,18 +67,27 @@ getgenv().Howl = {
         Macro = {
             Enabled = true,
             Speed = 0.065,
-            Type = "Electron", -- "First", "Third", "Electron" (Doesn't use "Speed")
+            Type = "Electron",
         },
-        Watermark = {
-            Enabled = true,
+        Autobuy = {
+            ProximityDistance = 10,
+        },
+        Visuals = {
+            EspEnabled = true,
+            EspColor = Color3.new(0.831373, 0.043137, 0.043137),
+            Distance = 30000,
+            DisplayName = true,
+            EspTransparency = false,
         },
     },
-    ESP = {
-        Enabled = true,
-        Color = Color3.new(0.788235, 0.450980, 0.070588),
-        Transparency = 4,
-        Distance = 30000,
-        DisplayName = true,
+    Cframe = {
+        Options = {
+            DefaultSpeed = 100,
+            Keybinds = {
+                ToggleMovement = "J",
+            },
+            Enable = true,
+        },
     },
 }
 
