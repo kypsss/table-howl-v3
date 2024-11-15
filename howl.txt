@@ -91,4 +91,4 @@ getgenv().Howl = {
     },
 }
 
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/1d3a8a843aa5ce6d1ce7fed41e62a5d3.lua"))()
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/d881d0f41e7265cf8c77969656115a2d.lua"))()
